@@ -54,7 +54,7 @@ test_cfg = dict(
     max_per_img=100)
 # dataset settings
 dataset_type = 'CocoDataset'
-data_root = 'data/coco/'
+data_root = '/mnt/cephfs_wj/cv/common/coco/COCO2017/'
 img_norm_cfg = dict(
     mean=[102.9801, 115.9465, 122.7717], std=[1.0, 1.0, 1.0], to_rgb=False)
 data = dict(
@@ -62,7 +62,7 @@ data = dict(
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/instances_train2017.json',
+        ann_file=data_root + 'annotations/instances_train2017_2parts.json',
         img_prefix=data_root + 'train2017/',
         img_scale=(1333, 800),
         img_norm_cfg=img_norm_cfg,
@@ -123,7 +123,7 @@ total_epochs = 12
 device_ids = range(4)
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
-work_dir = './work_dirs/fcos_r50_caffe_fpn_gn_1x_4gpu'
+work_dir = '/mnt/cephfs_wj/cv/wangxu.ailab/ideas_experiments/mmdetection/work_dirs/fcos_r50_caffe_fpn_gn_1x_4gpu'
 load_from = None
 resume_from = None
 workflow = [('train', 1)]
