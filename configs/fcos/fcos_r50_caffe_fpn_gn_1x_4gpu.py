@@ -58,12 +58,12 @@ data_root = '/mnt/cephfs_wj/cv/common/coco/COCO2017/'
 img_norm_cfg = dict(
     mean=[102.9801, 115.9465, 122.7717], std=[1.0, 1.0, 1.0], to_rgb=False)
 data = dict(
-    imgs_per_gpu=4,
+    imgs_per_gpu=1,
     workers_per_gpu=4,
     train=dict(
         type=dataset_type,
         ann_file=data_root + 'annotations/instances_train2017_2parts.json',
-        img_prefix=data_root + 'train2017/',
+        img_prefix=data_root,
         img_scale=(1333, 800),
         img_norm_cfg=img_norm_cfg,
         size_divisor=32,

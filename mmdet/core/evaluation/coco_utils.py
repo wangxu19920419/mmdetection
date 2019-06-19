@@ -8,6 +8,7 @@ from .recall import eval_recalls
 
 def coco_eval(result_file, result_types, coco, max_dets=(100, 300, 1000)):
     for res_type in result_types:
+        print(res_type)
         assert res_type in [
             'proposal', 'proposal_fast', 'bbox', 'segm', 'keypoints'
         ]

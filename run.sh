@@ -18,8 +18,10 @@
 ### change pip source image
 pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 mkdir -p /root/.torch/models
+mkdir -p /root/.cache/torch/checkpoints
 cp /mnt/cephfs_wj/cv/wangxu.ailab/pytorch/bytedetection/pretrain_models/* /mnt/cephfs_wj/cv/wangxu.ailab/ideas_experiments/mmdetection/pretrain_models/
 cp /mnt/cephfs_wj/cv/wangxu.ailab/ideas_experiments/mmdetection/pretrain_models/* /root/.torch/models/
+cp /mnt/cephfs_wj/cv/wangxu.ailab/ideas_experiments/mmdetection/pretrain_models/* /root/.cache/torch/checkpoints/
 cp -r /mnt/cephfs_wj/cv/wangxu.ailab/ideas_experiments/mmdetection /opt/tiger/run_arnold
 cp -r /mnt/cephfs_wj/cv/wangxu.ailab/pytorch/apex /opt/tiger/run_arnold/mmdetection/
 cd /opt/tiger/run_arnold/mmdetection/apex/
